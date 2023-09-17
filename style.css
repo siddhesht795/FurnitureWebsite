@@ -1,0 +1,267 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	scroll-padding-top: 2rem;
+	list-style: none;
+	text-decoration: none;
+	/*font-family: "Poppins", sans-serif;*/
+}
+
+:root {
+	--text-color: #000000;
+	--main-color: #83b735;
+}
+
+section {
+	padding: 50px 10%;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	right: 0px;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 18px 100px;
+	background: #edecea;
+}
+
+.logo {
+	font-size: 2rem;
+	font-weight: 600;
+	color: var(--text-color);
+}
+
+.logo span {
+	color: var(--main-color);
+}
+
+.navbar {
+	display: flex;
+	position: relative;
+}
+
+.navbar a {
+	font-size: 1.2rem;
+	padding: 10px 40px;
+	font-weight: 500;
+	color: var(--text-color);
+}
+
+.navbar a:hover{
+	color: var(--main-color);
+}
+
+#menu-icon {
+	font-size: 2rem;
+	cursor: pointer;
+	display: none;
+	color: var(--text-color);
+
+}
+
+@media (max-width: 1177px){
+	header {
+		padding: 11px 4%;
+	}
+
+	#menu-icon {
+		display: initial;
+	}
+
+	header .navbar {
+		position: absolute;
+		top: -500px;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		background: #fff;
+		box-shadow: 0px 4px 4px rgb(0 0 0 /10%);
+		transition: 0.2s ease;
+		text-align: center;
+	}
+
+	.navbar a{
+		padding: 1.5rem;
+		display: block;
+	}
+
+	.navbar.active {
+		top: 100%;
+	}
+
+	.navbar a:hover {
+		color: #fff;
+		background: var(--main-color);
+	}
+}
+
+/*HOMEPAGE*/
+
+.home {
+	/*color: #F7FFE5;*/
+	width: 100%;
+	min-height: 100vh;
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+	background-attachment: fixed;
+	display: flex;
+	align-items: center;
+}
+
+.home-text {
+	margin-bottom: 10%;
+}
+
+.home-text h1{
+	font-size: 4.5rem;
+	text-shadow: 5px 5px 10px #966638;
+	/*text-shadow: 7px 5px 5px #263A29;*/
+}
+
+.home-text p{
+	font-size: 1.2rem;
+	margin: 0.4rem 0 1.8rem;
+	/*color: #064635;
+	font-weight: bolder;*/
+}
+
+.home-text span{
+	color: var(--main-color);
+	/*text-shadow: 5px 5px 10px black;*/
+}
+
+.btn {
+	padding: 13px 22px;
+	background-color: var(--main-color);
+	color: #fff;
+	border-radius: 0.3rem;
+	font-size: 20px;
+}
+
+.btn:hover {
+	background-color: #8fc53d;
+}
+
+/*SHOP*/
+
+.shop .heading span {
+	display: flex;
+	justify-content: center;
+	color: var(--main-color);
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.shop .heading h2 {
+	display: flex;
+	justify-content: center;
+	font-size: 40px;
+	font-weight: bolder;
+	margin: 20px;
+}
+
+.shop-container{
+	display: grid;
+	grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+@media (max-width: 1488px) {
+	.shop-container {
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+}
+
+@media (max-width: 785px) {
+	.shop-container {
+		display: grid;
+		grid-template-columns: 100%;
+	}
+}
+
+.title-price {
+	display: flex;
+	justify-content: space-between;
+	padding: 12px;
+}
+
+.title-price h3{
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: black;
+}
+
+.box span{
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding-left: 12px;
+	color: var(--main-color);
+}
+
+.box-img-cont {
+	width: 100%;
+	height: 75%;
+}
+
+.box-img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-top-left-radius: 33px;
+	filter: blur(2px);
+	transition: filter 0.2s ease;
+}
+
+.box-img:hover{
+	filter: blur(0);
+}
+
+.box {
+	width: 80%;
+	border: 1px solid var(--text-color);
+	object-fit: contain;
+}
+
+.stars, .bx {
+	color: var(--main-color);
+}
+
+.box {
+	position: relative;
+	bottom: 0;
+	right: 0;
+	margin: 10px;
+	padding: 7px;
+	font-size: 20px;
+	color: #fff;
+	border-radius: 40px 0px 40px 0px;
+	/*background: var(--main-color);*/
+}
+
+.bx-cart {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 10px;
+	padding: 10px;
+	font-size: 23px;
+	color: #fff;
+	border-radius: 30px 0px 30px 0px;
+	background: var(--main-color);
+	filter: grayscale(0.1);
+}
+
+.box .bx-cart:hover {
+	background: #8fc53d;
+}
