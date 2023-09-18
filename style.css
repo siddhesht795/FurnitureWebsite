@@ -124,7 +124,7 @@ header {
 }
 
 .home-text h1{
-	font-size: 4.5rem;
+	font-size: 5rem;
 	text-shadow: 5px 5px 10px #966638;
 	transition: font-size ease 1s;
 	/*text-shadow: 7px 5px 5px #263A29;*/
