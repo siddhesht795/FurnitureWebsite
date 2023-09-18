@@ -218,7 +218,7 @@ header {
 	color: var(--main-color);
 }
 
-@media(max-width: 560px){
+@media (max-width: 560px){
 	.title-price h3{
 		padding-top: 5px;
 		font-size: 1.4rem;
@@ -232,6 +232,8 @@ header {
 		padding-left: 12px;
 		color: var(--main-color);
 	}	
+
+	
 }
 
 .box-img-cont {
@@ -246,6 +248,17 @@ header {
 	border-top-left-radius: 33px;
 	filter: brightness(75%);
 	transition: filter 0.2s ease;
+}
+
+@media (max-width: 560px){
+	.box-img {
+			width: 100%;
+			height: 300px;
+			object-fit: cover;
+			border-top-left-radius: 33px;
+			filter: brightness(75%);
+			transition: filter 0.2s ease;
+	}
 }
 
 .box-img:hover{
