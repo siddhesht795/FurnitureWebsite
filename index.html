@@ -1,449 +1,308 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');*/
-
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
-	scroll-padding-top: 2rem;
-	list-style: none;
-	text-decoration: none;
-	/*font-family: "Poppins", sans-serif;*/
-}
-
-:root {
-	--text-color: #000000;
-	--main-color: #83b735;
-}
-
-section {
-	padding: 50px 10%;
-}
-
-header {
-	position: fixed;
-	width: 100%;
-	top: 0px;
-	right: 0px;
-	z-index: 1000;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 18px 100px;
-	background: #edecea;
-}
-
-.logo {
-	font-size: 2rem;
-	font-weight: 600;
-	color: #876445;
-}
-
-.logo span {
-	color: var(--main-color);
-}
-
-.navbar {
-	display: flex;
-	position: relative;
-}
-
-.navbar a {
-	font-size: 1.2rem;
-	padding: 10px 40px;
-	font-weight: 500;
-	color: var(--text-color);
-}
-
-.navbar a:hover{
-	color: var(--main-color);
-}
-
-#menu-icon {
-	font-size: 2rem;
-	cursor: pointer;
-	display: none;
-	color: var(--text-color);
-
-}
-
-@media (max-width: 1177px){
-	header {
-		padding: 11px 4%;
-	}
-
-	#menu-icon {
-		display: initial;
-	}
-
-	header .navbar {
-		position: absolute;
-		top: -500px;
-		left: 0;
-		right: 0;
-		display: flex;
-		flex-direction: column;
-		background: #fff;
-		box-shadow: 0px 4px 4px rgb(0 0 0 /10%);
-		transition: 0.2s ease;
-		text-align: center;
-	}
-
-	.navbar a{
-		padding: 1.5rem;
-		display: block;
-	}
-
-	.navbar.active {
-		top: 100%;
-	}
-
-	.navbar a:hover {
-		color: #fff;
-		background: var(--main-color);
-	}
-}
-
-/*HOMEPAGE*/
-
-.home {
-	/*color: #F7FFE5;*/
-	width: 100%;
-	min-height: 100vh;
-	background-image: url(background.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: right;
-	background-attachment: fixed;
-	display: flex;
-	align-items: center;
-}
-
-.home-text {
-	margin-bottom: 10%;
-}
-
-.home-text h1{
-	font-size: 5rem;
-	text-shadow: 5px 5px 10px #966638;
-	transition: font-size ease 1s;
-	/*text-shadow: 7px 5px 5px #263A29;*/
-}
-
-.home-text p{
-	font-size: 1.2rem;
-	margin: 0.4rem 0 1.8rem;
-	/*color: #064635;
-	font-weight: bolder;*/
-}
-
-.home-text span{
-	color: var(--main-color);
-	/*text-shadow: 5px 5px 10px black;*/
-}
-
-@media (max-width: 800px){
-	.home-text h1{
-		font-size: 3.5rem;
-		text-shadow: 4px 4px 7px #966638;
-	}
-}
-
-.btn {
-	padding: 13px 22px;
-	background-color: var(--main-color);
-	color: #fff;
-	border-radius: 0.3rem;
-	font-size: 20px;
-}
-
-.btn:hover {
-	background-color: #8fc53d;
-}
-
-/*SHOP
-	.heading,  also used in NEW ARRIVALS
-*/
-
-.heading span {
-	display: flex;
-	justify-content: center;
-	color: var(--main-color);
-	font-size: 25px;
-	font-weight: bold;
-	margin: 10px 0px 0px 0px;
-}
-
-.heading h2 {
-	display: flex;
-	justify-content: center;
-	font-size: 40px;
-	font-weight: bolder;
-	margin: 20px 0px 70px 0px;
-}
-
-.shop-container, .new-container{
-	display: grid;
-	grid-template-columns: 33.33% 33.33% 33.33%;
-	grid-row-gap: 30px;
-}
-
-@media (max-width: 1488px) {
-	.shop-container, .new-container {
-		display: grid;
-		grid-template-columns: 50% 50%;
-	}
-}
-
-@media (max-width: 785px) {
-	.shop-container, .new-container {
-		display: grid;
-		grid-template-columns: 100%;
-	}
-}
-
-.title-price {
-	display: flex;
-	justify-content: space-between;
-	padding: 12px;
-}
-
-.title-price h3{
-	padding-top: 5px;
-	font-size: 1.5rem;
-	font-weight: 600;
-	color: black;
-}
-
-.box span{
-	font-size: 1.5rem;
-	font-weight: 500;
-	padding-left: 12px;
-	color: #876445;
-}
-
-@media (max-width: 560px){
-	.title-price h3{
-		padding-top: 5px;
-		font-size: 1.4rem;
-		font-weight: 600;
-		color: black;
-	}
-
-	.box span{
-		font-size: 1.2rem;
-		font-weight: 400;
-		padding-left: 12px;
-		color: var(--main-color);
-	}	
-
-	
-}
-
-.box-img-cont {
-	width: 100%;
-	height: 75%;
-}
-
-.box-img {
-	width: 100%;
-	height: 300px;
-	object-fit: cover;
-	border-radius: 33px 7px 0px 0px;
-	filter: brightness(75%);
-	transition: filter 0.2s ease;
-}
-
-@media (max-width: 560px){
-	.box-img {
-			width: 100%;
-			height: 300px;
-			object-fit: cover;
-			border-radius: 33px 7px 0px 0px;
-			filter: brightness(75%);
-			transition: filter 0.2s ease;
-	}
-}
-
-.box-img:hover{
-	filter: brightness(100%);
-}
-
-.box {
-	width: 80%;
-	/*border: 1px solid var(--text-color);*/
-	box-shadow: 5px 5px 100px rgb(134 181 64);
-	object-fit: contain;
-}
-
-.stars, .bx {
-	color: var(--main-color);
-}
-
-.box {
-	position: relative;
-	bottom: 0;
-	right: 0;
-	margin: 10px;
-	padding: 0px;
-	font-size: 20px;
-	color: #fff;
-	border-radius: 40px 7px 40px 7px;
-	/*background: var(--main-color);*/
-}
-
-.bx-cart {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	margin: 10px;
-	padding: 10px;
-	font-size: 23px;
-	color: #fff;
-	border-radius: 30px 0px 30px 0px;
-	background: var(--main-color);
-	filter: grayscale(0.1);
-}
-
-.box .bx-cart:hover {
-	background: #8fc53d;
-}
-
-/*ABOUT*/
-
-.about{
-	display: grid;
-	grid-template-columns: repeat(2,1fr);
-	grid-gap: 1rem;
-}
-
-.about-img img{
-	width: 80%;
-	border-radius: 10px;
-	object-fit: contain;
-}
-
-.about-text{
-	align-self: center;
-	line-height: 1.35;
-}
-
-.about-text span{
-	font-size: 3rem;
-	font-weight: 500;
-	text-transform: uppercase;
-	color: var(--main-color);
-}
-
-.about-text h2{
-	font-size: 2.35rem;
-}
-
-.about-text p{
-	font-size: 1.8rem;
-	margin: 0.5rem 0 1.4rem;
-}
-
-.about-text a{
-	font-size: 1.5rem;
-	font-weight: 500;
-}
-
-/*BRANDS*/
-
-.brands-container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit,minmax(100px,auto));
-	align-items: center;
-	justify-content: space-between;
-	grid-gap: 1rem;
-	margin-top: 2rem;
-}
-
-.brands-container img {
-	width: 160px;
-	filter: grayscale(1);
-}
-
-.brands-container img:hover {
-	filter: grayscale(0);
-}
-
-/*SUBSCRIBE*/
-
-.newsletter {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-image: url(background.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-}
-
-.newsletter h2{
-	font-size: 3rem;
-	color: #AA8B56;
-}
-
-.news-box {
-	display: flex;
-	align-items: center;
-	margin-top: 2rem;
-}
-
-.news-box input {
-	width: 260px;
-	height: 44px;
-	border: none;
-	outline: none;
-	background: #fff;
-	padding: 10px;	
-}
-
-.news-box .btn{
-	height: 44px;
-	padding: 11px;
-	border-radius: 0;
-	font-weight: 500;
-	text-transform: uppercase;
-}
-
-.footer{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(240px,auto));
-	grid-gap: 1rem;
-}
-
-.footer-box h2{
-	width: 100px;
-	font-size: 1.2rem;
-	font-weight: 600;
-	margin-bottom: 10px;
-}
-
-.footer-box span{
-	color: var(--main-color);
-}
-
-.footer-box p{
-	font-size: 0.938rem;
-	margin-bottom: 10px;
-}
-
-.social {
-	display: flex;
-	align-items: center;
-}
-
-.social a {
-	font-size: 30px;
-	margin-right: 10px;
-	color: var(--text-color);
-
-}
-
-.services {
-	display: flex;
-	flex-direction: column;
-}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Furniture Website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">Com<span>fico</span></a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+
+		<ul class="navbar">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#shop">Shop</a></li>
+			<li><a href="#new">New Arrival</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#brands">Our Partners</a></li>
+			<li><a href="#contacts">Contacts</a></li>
+		</ul>
+	</header>	
+
+	<!-- HOME -->
+	<section class="home" id="home">
+		<div class="home-text">
+			<h1><span>Make</span> Your Comfort <br> Is Our <span>Happiness</span></h1>
+			<p><i>Our biggest concern is your happiness.<br>We provide you with the best furniture in town.</i></p>
+			<a href="shop" class="btn">Shop Now</a>
+		</div>
+	</section>
+
+	<!-- SHOP -->
+
+	<section class="shop" id="shop">
+		<div class="heading">
+			<span>New Arrivals</span>
+			<h2>Shop Now</h2>
+		</div>
+		<!-- Content -->
+		<div class="shop-container">
+			<!-- SHOP BOX 1 -->
+			<div class="box">
+				<div class="box-img-cont">
+					<img src="shop 1.jpg" class="box-img">
+				</div>
+				<div class="title-price">
+					<h3>Gray Chair</h3>
+					<div class="stars">
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star-half' ></i>
+					</div>
+				</div>
+				<span><span style="text-decoration: line-through 2px; color: red; text-decoration-color: black;">45$</span>  60$</span>
+				<i class='bx bx-cart' ></i>
+			</div>
+
+			<!-- SHOP BOX 2 -->
+
+			<div class="box">
+				<div class="box-img-cont">
+					<img src="shop 2.jpg" class="box-img">
+				</div>
+				<div class="title-price">
+					<h3>Blue Chair</h3>
+					<div class="stars">
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bx-star'></i>
+					</div>
+				</div>
+				<span>40$</span>
+				<i class='bx bx-cart' ></i>
+			</div>
+
+			<!-- SHOP BOX 3 -->
+
+			<div class="box">
+				<div class="box-img-cont">
+					<img src="shop 3.jpg" class="box-img">
+				</div>
+				<div class="title-price">
+					<h3>Orange Chair + Mini Table</h3>
+					<div class="stars">
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bx-star'></i>
+					</div>
+				</div>
+				<span><span style="text-decoration: line-through 2px; color: red; text-decoration-color: black;">40$</span>  30$</span>
+				<i class='bx bx-cart' ></i>
+			</div>
+
+			<!-- SHOP BOX 4 -->
+
+			<div class="box">
+				<div class="box-img-cont">
+					<img src="shop 4.jpg" class="box-img">
+				</div>
+				<div class="title-price">
+					<h3>White Table Chair Set</h3>
+					<div class="stars">
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bx-star'></i>
+					</div>
+				</div>
+				<span>50$</span>
+				<i class='bx bx-cart' ></i>
+			</div>
+
+			<!-- SHOP BOX 5 -->
+			<div class="box">
+				<div class="box-img-cont">
+					<img src="shop 5.png" class="box-img">
+				</div>
+				<div class="title-price">
+					<h3>Laptop Stand</h3>
+					<div class="stars">
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+					</div>
+				</div>
+				<span><span style="text-decoration: line-through 2px; color: red; text-decoration-color: black;">15$</span>  11$</span>
+				<i class='bx bx-cart' ></i>
+			</div>
+
+			<!-- SHOP BOX 6 -->
+			<div class="box">
+				<div class="box-img-cont">
+					<img src="shop 6.png" class="box-img">
+				</div>
+				<div class="title-price">
+					<h3>Black Bar Stool</h3>
+					<div class="stars">
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star-half' ></i>
+					</div>
+				</div>
+				<span><span style="text-decoration: line-through 2px; color: red; text-decoration-color: black;">10$</span>  8$</span>
+				<i class='bx bx-cart' ></i>
+			</div>
+		</div>
+	</section>
+
+	<!-- NEW ARRIVALS -->
+	<section class="new" id="new">
+		<div class="heading">
+			<span>New Collection</span>
+			<h2>Best Selling</h2>
+		</div>
+		<!-- CONTENT -->
+		<div class="new-container">
+		<!-- NEW BOX 1 -->
+			<div class="box">
+				<div class="box-img-cont">
+					<img src="new 1.png" class="box-img">
+				</div>
+				<div class="title-price">
+					<h3>Ceiling Lamp</h3>
+					<div class="stars">
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star-half' ></i>
+					</div>
+				</div>
+				<span>10$</span>
+				<i class='bx bx-cart' ></i>
+			</div>
+
+			<!-- NEW BOX 2 -->
+			<div class="box">
+				<div class="box-img-cont">
+					<img src="new 2.png" class="box-img">
+				</div>
+				<div class="title-price">
+					<h3>Movable Storage</h3>
+					<div class="stars">
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star-half' ></i>
+					</div>
+				</div>
+				<span>15$</span>
+				<i class='bx bx-cart' ></i>
+			</div>
+
+			<!-- NEW BOX 3 -->
+			<div class="box">
+				<div class="box-img-cont">
+					<img src="new 3.png" class="box-img">
+				</div>
+				<div class="title-price">
+					<h3>Outdoor Rocking Chair</h3>
+					<div class="stars">
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star'></i>
+						<i class='bx bxs-star-half' ></i>
+					</div>
+				</div>
+				<span><span style="text-decoration: line-through 2px; color: red; text-decoration-color: black;">10$</span>  7$</span>
+				<i class='bx bx-cart' ></i>
+			</div>
+		</div>
+	</section>
+
+	<!-- ABOUT -->
+	<section class="about" id="about">
+		<div class="about-img">
+			<img src="about.jpg">
+		</div>
+		<div class="about-text">
+			<span>About Us</span>
+			<h2><strong style="color: #AA8B56;">Furniture</strong> is important part <br>for comfort.</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<a href="#shop" class="btn">Learn More.</a>
+		</div>
+	</section>
+
+	<!-- BRANDS -->
+	<section class="brands" id="brands">
+		<div class="heading">
+			<span>Brands</span>
+			<h2>Our Brand Partners </h2>
+		</div>
+		<div class="brands-container">
+			<img src="google.png">
+			<img src="ikea.png">
+			<img src="pepfry.png">
+			<img src="amazon.png">
+			<img src="flipkart.png">
+		</div>
+	</section>
+
+	<section class="newsletter" id="contact">
+		<h2>Subscribe to Newsletter</h2>
+		<div class="news-box">
+			<input type="text" placeholder="Enter your E-mail..." name="">
+			<a href="#" class="btn">Subscribe.</a>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer-box">
+			<h2>Com<span>fico</span></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+			<div class="social">
+				<a href="#"><img src="insta.png"></a>
+				<a href="#"><img src="twitter.png"></a>
+			</div>
+		</div>
+
+		<div class="services">
+			<h2>Services</h2>
+			<a href="#">Product</a>
+			<a href="#">Help & Support</a>
+			<a href="#">Pricing</a>
+			<a href="#">FAQ</a>
+		</div>
+
+		<div class="Product">
+			<a href="#">Sofa's</a>
+			<a href="#">Chair's</a>
+			<a href="#">Living Room</a>
+			<a href="#">Office</a>
+		</div>
+
+		<div class="contact">
+			<span>Louiswadi, Thane West, 400604</span>
+			<span>+91 8879985555</span>
+			<span>siddheshtodi@gmail.com</span>
+		</div>
+	</footer>
+
+	<script src="main.js"></script>
+</body>
+</html>
