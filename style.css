@@ -161,38 +161,42 @@ header {
 	background-color: #8fc53d;
 }
 
-/*SHOP*/
+/*SHOP
+	.heading,  also used in NEW ARRIVALS
+*/
 
-.shop .heading span {
+.heading span {
 	display: flex;
 	justify-content: center;
 	color: var(--main-color);
 	font-size: 25px;
 	font-weight: bold;
+	margin: 40px 0px 0px 0px;
 }
 
-.shop .heading h2 {
+.heading h2 {
 	display: flex;
 	justify-content: center;
 	font-size: 40px;
 	font-weight: bolder;
-	margin: 20px;
+	margin: 20px 0px 50px 0px;
 }
 
-.shop-container{
+.shop-container, .new-container{
 	display: grid;
 	grid-template-columns: 33.33% 33.33% 33.33%;
+	grid-row-gap: 30px;
 }
 
 @media (max-width: 1488px) {
-	.shop-container {
+	.shop-container, .new-container {
 		display: grid;
 		grid-template-columns: 50% 50%;
 	}
 }
 
 @media (max-width: 785px) {
-	.shop-container {
+	.shop-container, .new-container {
 		display: grid;
 		grid-template-columns: 100%;
 	}
@@ -267,7 +271,8 @@ header {
 
 .box {
 	width: 80%;
-	border: 1px solid var(--text-color);
+	/*border: 1px solid var(--text-color);*/
+	box-shadow: 5px 5px 10px black;
 	object-fit: contain;
 }
 
@@ -280,7 +285,7 @@ header {
 	bottom: 0;
 	right: 0;
 	margin: 10px;
-	padding: 7px;
+	padding: 0px;
 	font-size: 20px;
 	color: #fff;
 	border-radius: 40px 0px 40px 0px;
