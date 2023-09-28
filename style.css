@@ -108,7 +108,7 @@ header {
 
 .home {
 	/*color: #F7FFE5;*/
-	width: 100%;
+	width: 100vw;
 	min-height: 100vh;
 	background-image: url(background.jpg);
 	background-repeat: no-repeat;
@@ -117,6 +117,21 @@ header {
 	background-attachment: fixed;
 	display: flex;
 	align-items: center;
+}
+
+@media (max-width: 638px) {
+	.home {
+		/*color: #F7FFE5;*/
+		width: 157vw;
+		min-height: 100vh;
+		background-image: url(background.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: right;
+		background-attachment: fixed;
+		display: flex;
+		align-items: center;
+	}
 }
 
 .home-text {
@@ -166,6 +181,13 @@ header {
 	and title-price also used in NEW ARRIVALS
 */
 
+@media(max-width: 638px) {
+	.shop {
+		width: 130%;
+		margin-left: 13%;
+	}
+}
+
 .heading span {
 	display: flex;
 	justify-content: center;
@@ -202,6 +224,13 @@ header {
 	.shop-container, .new-container {
 		display: grid;
 		grid-template-columns: 100%;
+	}
+}
+
+@media(max-width: 638px) {
+	#new {
+		width: 130%;
+		margin-left: 13%;
 	}
 }
 
@@ -434,6 +463,15 @@ header {
 	}
 }
 
+@media (max-width: 650px){
+	.about-img img{
+		padding: 0px;
+		border-radius: 20px;
+		object-fit: contain;
+		transition: width ease 0.6s;
+	}
+}
+
 /*BRANDS*/
 
 .brands-container {
@@ -443,6 +481,13 @@ header {
 	justify-content: space-between;
 	grid-gap: 1rem;
 	margin-top: 2rem;
+}
+
+@media(max-width: 638px) {
+	.brands {
+		width: 130%;
+		margin-left: 13%;
+	}
 }
 
 .brands-container img {
@@ -487,6 +532,12 @@ header {
 	background-position: center;
 }
 
+@media(max-width: 638px) {
+	.newsletter {
+		width: 157%;
+	}
+}
+
 .newsletter h2{
 	font-size: 3rem;
 	color: #AA8B56;
@@ -526,12 +577,18 @@ header {
 	padding: 40px 60px;
 }
 
-.footer-box{
-	margin-left: 20px;
+@media(max-width: 638px) {
+	.footer, .copyright {
+		width: 157%;
+	}
 }
 
+/*.footer-box{
+	margin-left: 20px;
+}*/
+
 .footer-box h2{
-	width: 100px;
+	/*width: 100px;*/
 	font-size: 3rem;
 	font-weight: 600;
 	margin-bottom: 10px;
@@ -603,5 +660,57 @@ header {
 }
 
 @media (max-width: 1150px) {
-	
+	.footer{
+		/*margin-left: 5%;
+		margin-right: 8%;*/
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		grid-template-rows: repeat(2,1fr);
+		grid-gap: 1rem;
+		padding: 40px 60px;
+	}
+}
+
+@media (max-width: 400px) {
+	.footer{
+		/*margin-left: 5%;
+		margin-right: 8%;*/
+		display: grid;
+		grid-template-columns: repeat(1,1fr);
+		grid-template-rows: repeat(4,1fr);
+		grid-gap: 1rem;
+		padding: 40px 60px;
+	}
+
+	.footer-box, .services, .product, .contact {
+		margin: auto;
+	}
+
+	.footer-box h2{
+		text-align: center;
+		font-size: 3rem;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+
+	.footer-box p{
+		font-size: 1.4rem;
+		margin-bottom: 10px;
+	}
+
+	.social a {
+		display: flex;
+		font-size: 30px;
+		margin-right: 10px;
+		margin-left: 25%;
+		color: var(--text-color);
+		align-content: center;
+	}		
+
+	.copyright{
+		/*margin: 50%;*/
+		text-align: center;
+		font-size: 1.15rem;
+		color: #807b7a;
+	}
 }
