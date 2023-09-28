@@ -522,7 +522,7 @@ header {
 	margin-right: 8%;*/
 	display: grid;
 	grid-template-columns: repeat(4,1fr);
-	grid-gap: 10rem;
+	/*grid-gap: 10rem;*/
 	padding: 40px 60px;
 }
 
@@ -600,4 +600,8 @@ header {
 	text-align: center;
 	font-size: 1.15rem;
 	color: #807b7a;
+}
+
+@media (max-width: 1150px) {
+	
 }
